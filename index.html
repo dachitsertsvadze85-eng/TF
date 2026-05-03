@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF Cars - Premium Car Brands</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: 'Arial', sans-serif;
+            color: #00ff00;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #000000;
+            border-bottom: 2px solid #00ff00;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Categories on Top Left */
+        .categories {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .categories a {
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .categories a:hover {
+            border: 1px solid #00ff00;
+            background-color: rgba(0, 255, 0, 0.1);
+        }
+
+        /* Title in Center */
+        .logo-title {
+            flex: 1;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #00ff00;
+            letter-spacing: 3px;
+        }
+
+        /* Search Bar on Top Right */
+        .search-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .search-container input {
+            padding: 10px 15px;
+            width: 200px;
+            background-color: #1a1a1a;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .search-container input::placeholder {
+            color: #00aa00;
+        }
+
+        .search-container input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .search-btn {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #00ff00;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #00aa00;
+            transform: scale(1.05);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+        }
+
+        /* Car Brands Container */
+        .brands-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Brand Card Styling */
+        .brand-card {
+            background-color: #1a1a1a;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .brand-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ff00;
+            background-color: rgba(0, 255, 0, 0.05);
+        }
+
+        .brand-card img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .brands-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .categories {
+                justify-content: center;
+            }
+
+            .search-container {
+                justify-content: center;
+            }
+
+            .search-container input {
+                width: 150px;
+            }
+
+            .brands-container {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
+
+            .brand-card {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Categories on Left -->
+        <div class="categories">
+            <a href="#all">All Cars</a>
+            <a href="#luxury">Luxury</a>
+            <a href="#sports">Sports</a>
+        </div>
+
+        <!-- Website Title in Center -->
+        <div class="logo-title">TF CARS</div>
+
+        <!-- Search Bar on Right -->
+        <div class="search-container">
+            <input type="text" placeholder="Search cars...">
+            <button class="search-btn">Search</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="brands-container">
+            <!-- Toyota Card -->
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Toyota_logo.svg/1200px-Toyota_logo.svg.png" alt="Toyota">
+            </div>
+
+            <!-- BMW Card -->
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/1200px-BMW.svg.png" alt="BMW">
+            </div>
+
+            <!-- Mercedes Card -->
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Mercedes_Benz_logo.svg/1200px-Mercedes_Benz_logo.svg.png" alt="Mercedes">
+            </div>
+
+            <!-- Audi Card -->
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Audi_logo_detail.svg/1200px-Audi_logo_detail.svg.png" alt="Audi">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
